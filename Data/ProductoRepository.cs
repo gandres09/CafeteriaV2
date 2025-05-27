@@ -14,7 +14,7 @@ public class ProductoRepository
     public List<Producto> ObtenerTodos()
     {
         var productos = new List<Producto>();
-        using (var conn = new SqliteConnection(connectionString)) // Esto requiere System.Data.SQLite
+        using (var conn = new SqliteConnection(connectionString))
         {
             conn.Open();
             string query = "SELECT * FROM Productos";
@@ -27,8 +27,16 @@ public class ProductoRepository
                     {
                         Id = Convert.ToInt32(reader["Id"]),
                         Nombre = reader["Nombre"].ToString(),
+                        Descripcion = reader["Descripcion"].ToString(),
                         Precio = Convert.ToDecimal(reader["Precio"]),
-                        Stock = Convert.ToInt32(reader["Stock"])
+                        Costo = Convert.ToDecimal(reader["Costo"]),
+                        Stock = Convert.ToInt32(reader["Stock"]),
+                        Categoria = reader["Categoria"].ToString(),
+                        Estado = Convert.ToBoolean(reader["Estado"]),
+                        FechaAlta = Convert.ToDateTime(reader["FechaAlta"]),
+                        FechaModificacion = Convert.ToDateTime(reader["FechaModificacion"]),
+                        Vencimiento = Convert.ToDateTime(reader["Vencimiento"]),
+                        CodigoInterno = Convert.ToInt32(reader["CodigoInterno"])
                     });
                 }
             }
