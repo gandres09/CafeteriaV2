@@ -28,7 +28,7 @@ public class VentaPublicoRepository
                             Id = Convert.ToInt32(reader["Id"]),
                             Fecha = Convert.ToDateTime(reader["FechaVenta"]),
                             Total = Convert.ToDecimal(reader["Total"]),
-                            MetodoPago = reader["MetodoPago"].ToString(),
+                            MetodoPago = (VentaPublico.TiposDeMetodoPago)Enum.Parse(typeof(VentaPublico.TiposDeMetodoPago), reader["MetodoPago"].ToString()),
                             ClienteId = reader["ClienteId"] as int? // Puede ser nulo
                         });
                     }

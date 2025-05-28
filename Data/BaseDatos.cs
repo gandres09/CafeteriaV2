@@ -87,6 +87,62 @@ namespace CafeteriaV2.Data
                             Motivo TEXT,
                             FOREIGN KEY (ClienteId) REFERENCES Clientes(Id)
                         );
+
+                        -- Tabla de arqueos diarios
+                        CREATE TABLE IF NOT EXISTS ArqueoDiario (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            Fecha TEXT NOT NULL UNIQUE,
+                            SaldoInicial REAL NOT NULL,
+                            SaldoFinal REAL, -- se carga al final del día
+                            TotalVentas REAL, -- se calcula desde VentasPublico
+                            Diferencia REAL, -- SaldoFinal - (SaldoInicial + TotalVentas)
+                            Observaciones TEXT,
+                            Turno TEXT NOT NULL, -- Turno1, Turno2, etc.
+                            UsuarioId INTEGER NOT NULL,
+                            FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id)
+                        );
+
+                        -- Tabla de retiros de caja
+                        CREATE TABLE IF NOT EXISTS RetirosCaja (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            ArqueoId INTEGER,
+                            UsuarioId INTEGER NOT NULL,
+                            Turno TEXT NOT NULL,
+                            Fecha TEXT NOT NULL,
+                            Monto REAL NOT NULL,
+                            Motivo TEXT,
+                            FOREIGN KEY (ArqueoId) REFERENCES ArqueoDiario(Id),
+                            FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id)
+                        );
+                        -- Tabla de usuarios del sistema
+                        CREATE TABLE IF NOT EXISTS Usuarios (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            NombreUsuario TEXT NOT NULL UNIQUE,
+                            ContrasenaHash TEXT NOT NULL,
+                            Rol TEXT NOT NULL, -- Admin, Cajero, etc.
+                            Estado TEXT NOT NULL DEFAULT 'Activo',
+                            FechaAlta TEXT NOT NULL
+                        );
+
+                        -- Tabla de Promociones
+                        CREATE TABLE IF NOT EXISTS Promociones (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            Nombre TEXT NOT NULL,
+                            Descripcion TEXT,
+                            Activa INTEGER NOT NULL,
+                            Tipo INTEGER NOT NULL,
+                            DescuentoPorcentaje REAL,
+                            DescuentoFijo REAL,
+                            MontoMinimo REAL,
+                            ProductoId INTEGER,
+                            PuntosOtorgados INTEGER,
+                            FechaInicio TEXT NOT NULL,
+                            FechaFin TEXT NOT NULL,
+                            FOREIGN KEY (ProductoId) REFERENCES Productos(Id)
+                        );
+
+
+
                     ";
 
                     cmd.ExecuteNonQuery();

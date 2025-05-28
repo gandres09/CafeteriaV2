@@ -180,15 +180,23 @@
   <ItemGroup>
     <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Data\BaseDatos.cs" />
+    <Compile Include="Models\Entities\ArqueoDiario.cs" />
     <Compile Include="Models\Entities\Cliente.cs" />
     <Compile Include="Models\Entities\MovimientoPuntos.cs" />
+    <Compile Include="Models\Entities\Promocion.cs" />
     <Compile Include="Models\Entities\Proveedor.cs" />
+    <Compile Include="Models\Entities\RetiroCaja.cs" />
+    <Compile Include="Models\Entities\Usuario.cs" />
     <Compile Include="Models\Entities\VentaPublico.cs" />
+    <Compile Include="Models\Repositories\ArqueoDiarioRepository.cs" />
     <Compile Include="Models\Repositories\ClienteRepository.cs" />
     <Compile Include="Models\Repositories\MovimientoPuntosRepository.cs" />
     <Compile Include="Models\Repositories\ProductoRepository.cs" />
     <Compile Include="Models\Entities\Producto.cs" />
+    <Compile Include="Models\Repositories\PromocionRepository.cs" />
     <Compile Include="Models\Repositories\ProveedorRepository.cs" />
+    <Compile Include="Models\Repositories\RetiroCajaRepository.cs" />
+    <Compile Include="Models\Repositories\UsuarioRepository.cs" />
     <Compile Include="Models\Repositories\VentaPublicoRepository.cs" />
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
