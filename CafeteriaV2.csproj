@@ -184,9 +184,12 @@
     <Compile Include="Models\Entities\MovimientoPuntos.cs" />
     <Compile Include="Models\Entities\Proveedor.cs" />
     <Compile Include="Models\Entities\VentaPublico.cs" />
+    <Compile Include="Models\Repositories\ClienteRepository.cs" />
+    <Compile Include="Models\Repositories\MovimientoPuntosRepository.cs" />
     <Compile Include="Models\Repositories\ProductoRepository.cs" />
     <Compile Include="Models\Entities\Producto.cs" />
     <Compile Include="Models\Repositories\ProveedorRepository.cs" />
+    <Compile Include="Models\Repositories\VentaPublicoRepository.cs" />
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
