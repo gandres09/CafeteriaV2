@@ -4,6 +4,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using CafeteriaV2.Views.Forms;
 
 namespace CafeteriaV2.Views.Forms
 {
@@ -73,6 +74,7 @@ namespace CafeteriaV2.Views.Forms
                         UsuarioAutenticado = usuario;
                         this.DialogResult = DialogResult.OK;
                         this.Close();
+
                     }
                     else
                     {

@@ -9,13 +9,26 @@ namespace CafeteriaV2
     static class Program
     {
         [STAThread]
+
         static void Main()
         {
             BaseDatos.Inicializar();
             SQLitePCL.Batteries_V2.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+
+            using (var loginForm = new FormLogin())
+            {
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new MainForm());
+                }
+                else
+                {
+                    // Si el usuario cierra o cancela el login
+                    Application.Exit();
+                }
+            }
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using CafeteriaV2.Views.Forms;
+﻿using CafeteriaV2.Models.Entities;
+using CafeteriaV2.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
