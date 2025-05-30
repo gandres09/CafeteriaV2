@@ -1,8 +1,8 @@
-﻿using CafeteriaV2.Views.Forms;
+﻿using CafeteriaV2.Data;
+using CafeteriaV2.Models.Entities;
+using CafeteriaV2.Views.Forms;
 using System;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
-using CafeteriaV2.Data;
 
 namespace CafeteriaV2
 {
@@ -21,7 +21,8 @@ namespace CafeteriaV2
             {
                 if (loginForm.ShowDialog() == DialogResult.OK)
                 {
-                    Application.Run(new MainForm());
+                    var usuario = loginForm.UsuarioAutenticado;
+                    Application.Run(new MainForm(usuario));
                 }
                 else
                 {

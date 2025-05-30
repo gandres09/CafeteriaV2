@@ -218,6 +218,69 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MenuArbol\AgregarClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarClienteForm.Designer.cs">
+      <DependentUpon>AgregarClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarProductoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarProductoForm.Designer.cs">
+      <DependentUpon>AgregarProductoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarPromocionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarPromocionForm.Designer.cs">
+      <DependentUpon>AgregarPromocionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarProveedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarProveedorForm.Designer.cs">
+      <DependentUpon>AgregarProveedorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\AgregarUsuarioForm.Designer.cs">
+      <DependentUpon>AgregarUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaClienteForm.Designer.cs">
+      <DependentUpon>ConsultaClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaProductoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaProductoForm.Designer.cs">
+      <DependentUpon>ConsultaProductoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaPromocionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaPromocionForm.Designer.cs">
+      <DependentUpon>ConsultaPromocionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaProveedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaProveedorForm.Designer.cs">
+      <DependentUpon>ConsultaProveedorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ConsultaUsuarioForm.Designer.cs">
+      <DependentUpon>ConsultaUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

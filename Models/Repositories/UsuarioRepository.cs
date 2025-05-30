@@ -85,5 +85,30 @@ namespace CafeteriaV2.Data
 
             return usuarios;
         }
+
+        public static int CantidadUsuarios()
+        {
+            using (var conn = new SqliteConnection(BaseDatos.ConnectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM Usuarios;";
+
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        public static int CantidadUsuariosAdmin()
+        {
+            using (var conn = new SqliteConnection(BaseDatos.ConnectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM Usuarios WHERE Rol = 'Admin';";
+
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
     }
 }

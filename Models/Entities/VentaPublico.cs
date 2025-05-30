@@ -13,6 +13,7 @@ namespace CafeteriaV2.Models.Entities
             Otros
         }
         public TiposDeMetodoPago MetodoPago { get; set; } // Método de pago utilizado
+        public int CajeroID { get; set; } // ID del cajero que realizó la venta
         public int? ClienteId { get; set; } // Puede ser null si la venta fue sin cliente
         public Cliente Cliente { get; set; } // Relación de navegación
     }

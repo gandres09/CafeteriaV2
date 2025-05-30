@@ -2,16 +2,19 @@
 
 
 quarter-spanish-white:{
-    '50': #f9f1df,
-    '100': #f5ead0,
+    '50': #f9f1df, -- Fondos
+    '100': #f5ead0, -- Fondo Arbol
     '200': #ebd29c,
     '300': #e0b769,
     '400': #d9a046,
     '500': #d08430,
     '600': #b86527,
     '700': #994a24,
-    '800': #7d3b23,
+    '800': #7d3b23, -- Titulos
     '900': #673220,
     '950': #3b180d,
+
+    Letras:
+        PMingLiU-ExtB, 18pt, style=Bold, -- Arbol
 
     }

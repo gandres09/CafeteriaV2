@@ -10,7 +10,7 @@ namespace CafeteriaV2.Views.Forms
         private TextBox txtConfirmarContrasena;
         private ComboBox cmbRol;
         private Button btnLogin;
-        private Button btnCancelar;
+        private Button btnSalir;
         private Button btnCambiarModo;
         private Label lblUsuario;
         private Label lblContrasena;
@@ -29,115 +29,145 @@ namespace CafeteriaV2.Views.Forms
 
         private void InitializeComponent()
         {
-            this.txtUsuario = new TextBox();
-            this.txtContrasena = new TextBox();
-            this.txtConfirmarContrasena = new TextBox();
-            this.cmbRol = new ComboBox();
-            this.btnLogin = new Button();
-            this.btnCancelar = new Button();
-            this.btnCambiarModo = new Button();
-            this.lblUsuario = new Label();
-            this.lblContrasena = new Label();
-            this.lblConfirmarContrasena = new Label();
-            this.lblRol = new Label();
-            this.lblTitulo = new Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnCambiarModo = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblContrasena = new System.Windows.Forms.Label();
+            this.lblConfirmarContrasena = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
-
-            // lblTitulo  
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(80, 20);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(140, 26);
-            this.lblTitulo.Text = "Iniciar Sesión";
-
-            // lblUsuario  
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(30, 60);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.Text = "Usuario:";
-
-            // txtUsuario  
+            // 
+            // txtUsuario
+            // 
             this.txtUsuario.Location = new System.Drawing.Point(30, 80);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(240, 20);
-
-            // lblContrasena  
-            this.lblContrasena.AutoSize = true;
-            this.lblContrasena.Location = new System.Drawing.Point(30, 110);
-            this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(64, 13);
-            this.lblContrasena.Text = "Contraseña:";
-
-            // txtContrasena  
+            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
+            // 
+            // txtContrasena
+            // 
             this.txtContrasena.Location = new System.Drawing.Point(30, 130);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(240, 20);
-
-            // lblConfirmarContrasena  
-            this.lblConfirmarContrasena.AutoSize = true;
-            this.lblConfirmarContrasena.Location = new System.Drawing.Point(30, 160);
-            this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(108, 13);
-            this.lblConfirmarContrasena.Text = "Confirmar Contraseña:";
-            this.lblConfirmarContrasena.Visible = false;
-
-            // txtConfirmarContrasena  
+            this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
+            // 
+            // txtConfirmarContrasena
+            // 
             this.txtConfirmarContrasena.Location = new System.Drawing.Point(30, 180);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.PasswordChar = '*';
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(240, 20);
+            this.txtConfirmarContrasena.TabIndex = 6;
             this.txtConfirmarContrasena.Visible = false;
-
-            // lblRol  
+            this.txtConfirmarContrasena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
+            // 
+            // cmbRol
+            // 
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Items.AddRange(new object[] {
+            "Admin"});
+            this.cmbRol.Location = new System.Drawing.Point(30, 230);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(240, 21);
+            this.cmbRol.TabIndex = 8;
+            this.cmbRol.Visible = false;
+            this.cmbRol.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(30, 270);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "Ingresar";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(195, 270);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnCambiarModo
+            // 
+            this.btnCambiarModo.Location = new System.Drawing.Point(30, 300);
+            this.btnCambiarModo.Name = "btnCambiarModo";
+            this.btnCambiarModo.Size = new System.Drawing.Size(240, 23);
+            this.btnCambiarModo.TabIndex = 11;
+            this.btnCambiarModo.Text = "¿No tienes cuenta? Regístrate";
+            this.btnCambiarModo.UseVisualStyleBackColor = true;
+            this.btnCambiarModo.Click += new System.EventHandler(this.btnCambiarModo_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(30, 60);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // lblContrasena
+            // 
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.Location = new System.Drawing.Point(30, 110);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(64, 13);
+            this.lblContrasena.TabIndex = 3;
+            this.lblContrasena.Text = "Contraseña:";
+            // 
+            // lblConfirmarContrasena
+            // 
+            this.lblConfirmarContrasena.AutoSize = true;
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(30, 160);
+            this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(111, 13);
+            this.lblConfirmarContrasena.TabIndex = 5;
+            this.lblConfirmarContrasena.Text = "Confirmar Contraseña:";
+            this.lblConfirmarContrasena.Visible = false;
+            // 
+            // lblRol
+            // 
             this.lblRol.AutoSize = true;
             this.lblRol.Location = new System.Drawing.Point(30, 210);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(26, 13);
+            this.lblRol.TabIndex = 7;
             this.lblRol.Text = "Rol:";
             this.lblRol.Visible = false;
-
-            // cmbRol  
-            this.cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Items.AddRange(new object[] { "Admin", "Cajero" });
-            this.cmbRol.Location = new System.Drawing.Point(30, 230);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(240, 21);
-            this.cmbRol.SelectedIndex = 0;
-            this.cmbRol.Visible = false;
-
-            // btnLogin  
-            this.btnLogin.Location = new System.Drawing.Point(30, 270);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.Text = "Ingresar";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-
-            // btnCancelar  
-            this.btnCancelar.Location = new System.Drawing.Point(195, 270);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-
-            // btnCambiarModo  
-            this.btnCambiarModo.Location = new System.Drawing.Point(30, 300);
-            this.btnCambiarModo.Name = "btnCambiarModo";
-            this.btnCambiarModo.Size = new System.Drawing.Size(240, 23);
-            this.btnCambiarModo.Text = "¿No tienes cuenta? Regístrate";
-            this.btnCambiarModo.UseVisualStyleBackColor = true;
-            this.btnCambiarModo.Click += new System.EventHandler(this.btnCambiarModo_Click);
-
-            // FormLogin  
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(300, 350);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(59)))), ((int)(((byte)(35)))));
+            this.lblTitulo.Location = new System.Drawing.Point(38, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(157, 26);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Iniciar Sesión";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FormLogin
+            // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
+            this.ClientSize = new System.Drawing.Size(299, 341);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.txtUsuario);
@@ -148,12 +178,17 @@ namespace CafeteriaV2.Views.Forms
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCambiarModo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cafetería - Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

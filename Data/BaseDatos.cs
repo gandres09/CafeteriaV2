@@ -64,6 +64,8 @@ namespace CafeteriaV2.Data
                             Total REAL NOT NULL,
                             MetodoPago TEXT NOT NULL,
                             ClienteId INTEGER,
+                            CajeroId INTEGER NOT NULL, -- ID del cajero que realizó la venta
+                            FOREIGN KEY (CajeroId) REFERENCES Usuarios(Id),
                             FOREIGN KEY (ClienteId) REFERENCES Clientes(Id)
                         );
 

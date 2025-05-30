@@ -4,13 +4,11 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using CafeteriaV2.Views.Forms;
 
 namespace CafeteriaV2.Views.Forms
 {
     public partial class FormLogin : Form
     {
-
         public Usuario UsuarioAutenticado { get; private set; }
         private bool modoRegistro = false;
 
@@ -20,15 +18,13 @@ namespace CafeteriaV2.Views.Forms
             VerificarSiExistenUsuarios();
         }
 
-
         private void VerificarSiExistenUsuarios()
         {
             try
             {
-                var usuarios = UsuarioRepository.ObtenerTodos();
-                if (usuarios.Count == 0)
+                var usuarios = UsuarioRepository.CantidadUsuarios();
+                if (usuarios == 0)
                 {
-                    // No hay usuarios, activar modo registro automáticamente  
                     CambiarAModoRegistro();
                     MessageBox.Show("No hay usuarios en el sistema. Cree el primer usuario administrador.",
                         "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -41,16 +37,20 @@ namespace CafeteriaV2.Views.Forms
             }
         }
 
+        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (modoRegistro)
-            {
                 RegistrarUsuario();
-            }
             else
-            {
                 AutenticarUsuario();
-            }
         }
 
         private void AutenticarUsuario()
@@ -74,7 +74,6 @@ namespace CafeteriaV2.Views.Forms
                         UsuarioAutenticado = usuario;
                         this.DialogResult = DialogResult.OK;
                         this.Close();
-
                     }
                     else
                     {
@@ -115,7 +114,6 @@ namespace CafeteriaV2.Views.Forms
 
             try
             {
-                // Verificar si el usuario ya existe  
                 var usuarioExistente = UsuarioRepository.ObtenerUsuarioPorNombre(txtUsuario.Text);
                 if (usuarioExistente != null)
                 {
@@ -138,7 +136,6 @@ namespace CafeteriaV2.Views.Forms
                 MessageBox.Show("Usuario creado exitosamente", "Éxito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Cambiar a modo login después del registro  
                 CambiarAModoLogin();
                 LimpiarCampos();
             }
@@ -151,6 +148,11 @@ namespace CafeteriaV2.Views.Forms
 
         private void CambiarAModoRegistro()
         {
+            if (UsuarioRepository.CantidadUsuariosAdmin() > 0)
+            {
+                cmbRol.Items.Remove("Admin");
+                cmbRol.Items.AddRange(new object[] { "Cajero" });
+            }
             modoRegistro = true;
             lblTitulo.Text = "Registrar Usuario";
             btnLogin.Text = "Registrar";
@@ -161,8 +163,7 @@ namespace CafeteriaV2.Views.Forms
             lblRol.Visible = true;
             cmbRol.Visible = true;
 
-            // Ajustar tamaño del formulario  
-            this.Height = 350;
+            this.Height = 380;
         }
 
         private void CambiarAModoLogin()
@@ -177,20 +178,16 @@ namespace CafeteriaV2.Views.Forms
             lblRol.Visible = false;
             cmbRol.Visible = false;
 
-            // Ajustar tamaño del formulario  
-            this.Height = 280;
+            this.Height = 380;
         }
 
         private void btnCambiarModo_Click(object sender, EventArgs e)
         {
             if (modoRegistro)
-            {
                 CambiarAModoLogin();
-            }
             else
-            {
                 CambiarAModoRegistro();
-            }
+
             LimpiarCampos();
         }
 
@@ -216,10 +213,33 @@ namespace CafeteriaV2.Views.Forms
             return GenerarHashContrasena(contrasena) == hash;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        // ✅ MÉTODO CENTRALIZADO PARA VERIFICAR CIERRE
+        private bool PuedeCerrarAplicacion()
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            if (ArqueoDiarioRepository.HayDiaIniciadoSinCerrar())
+            {
+                MessageBox.Show("No se puede cerrar la aplicación mientras haya un día sin cerrar.",
+                    "Día en curso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.DialogResult != DialogResult.OK && !PuedeCerrarAplicacion())
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (PuedeCerrarAplicacion())
+            {
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+            }
         }
     }
 }

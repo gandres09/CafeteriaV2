@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CafeteriaV2.Data;
 using CafeteriaV2.Models.Entities;
+using Microsoft.Data.Sqlite;
 
 public static class ArqueoDiarioRepository
 {
@@ -32,6 +34,19 @@ public static class ArqueoDiarioRepository
             arqueo.Diferencia = arqueoActualizado.Diferencia;
             arqueo.Observaciones = arqueoActualizado.Observaciones;
             arqueo.Usuario = arqueoActualizado.Usuario;
+        }
+    }
+    public static bool HayDiaIniciadoSinCerrar()
+    {
+        using (var connection = new SqliteConnection(BaseDatos.ConnectionString))
+        {
+            connection.Open();
+            string query = "SELECT COUNT(*) FROM ArqueoDiario WHERE SaldoFinal IS NULL";
+            using (var command = new SqliteCommand(query, connection))
+            {
+                long count = (long)command.ExecuteScalar();
+                return count > 0;
+            }
         }
     }
 }
