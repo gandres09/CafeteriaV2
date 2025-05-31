@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Agregar producto");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Consultar producto");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Agregar promocion");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Consultar promocion");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Promociones", new System.Windows.Forms.TreeNode[] {
-            treeNode35,
-            treeNode36});
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Productos", new System.Windows.Forms.TreeNode[] {
-            treeNode33,
-            treeNode34,
-            treeNode37});
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Agregar proveedor");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Consultar proveedor");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Proveedores", new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40});
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Agregar usuario");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Consultar usuario");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
-            treeNode42,
-            treeNode43});
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Agregar Cliente");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Consultar cliente");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Clientes", new System.Windows.Forms.TreeNode[] {
-            treeNode45,
-            treeNode46});
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Menu", new System.Windows.Forms.TreeNode[] {
-            treeNode38,
-            treeNode41,
-            treeNode44,
-            treeNode47});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Agregar producto");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Consultar producto");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Agregar promocion");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Consultar promocion");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Promociones", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Productos", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Agregar proveedor");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Consultar proveedor");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Proveedores", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Agregar usuario");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Consultar usuario");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Agregar Cliente");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Consultar cliente");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Clientes", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Menu", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode9,
+            treeNode12,
+            treeNode15});
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuArbol = new System.Windows.Forms.TreeView();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
@@ -83,41 +83,40 @@
             this.MenuArbol.ItemHeight = 20;
             this.MenuArbol.Location = new System.Drawing.Point(13, 227);
             this.MenuArbol.Name = "MenuArbol";
-            treeNode33.Name = "NodoAgregarProducto";
-            treeNode33.Text = "Agregar producto";
-            treeNode34.Name = "NodoConsultarProducto";
-            treeNode34.Text = "Consultar producto";
-            treeNode35.Name = "NodoAgregarPromocion";
-            treeNode35.Text = "Agregar promocion";
-            treeNode36.Name = "NodoConsultarPromocion";
-            treeNode36.Text = "Consultar promocion";
-            treeNode37.Name = "NodoPromociones";
-            treeNode37.Text = "Promociones";
-            treeNode38.Name = "NodoProductos";
-            treeNode38.Text = "Productos";
-            treeNode39.Name = "NodoAgregarProveedor";
-            treeNode39.Text = "Agregar proveedor";
-            treeNode40.Name = "NodoConsultarProveedor";
-            treeNode40.Text = "Consultar proveedor";
-            treeNode41.Name = "NodoProveedores";
-            treeNode41.Text = "Proveedores";
-            treeNode42.Name = "NodoAgregarUsuario";
-            treeNode42.Text = "Agregar usuario";
-            treeNode43.Name = "NodoConsultarUsuario";
-            treeNode43.Text = "Consultar usuario";
-            treeNode44.Name = "NodoUsuarios";
-            treeNode44.Text = "Usuarios";
-            treeNode45.Name = "NodoAgregarCliente";
-            treeNode45.Text = "Agregar Cliente";
-            treeNode46.Name = "NodoConsultarCliente";
-            treeNode46.Text = "Consultar cliente";
-            treeNode47.Name = "NodoClientes";
-            treeNode47.Text = "Clientes";
-            treeNode48.Checked = true;
-            treeNode48.Name = "NodoMenu";
-            treeNode48.Text = "Menu";
+            treeNode1.Name = "NodoAgregarProducto";
+            treeNode1.Text = "Agregar producto";
+            treeNode2.Name = "NodoConsultarProducto";
+            treeNode2.Text = "Consultar producto";
+            treeNode3.Name = "NodoAgregarPromocion";
+            treeNode3.Text = "Agregar promocion";
+            treeNode4.Name = "NodoConsultarPromocion";
+            treeNode4.Text = "Consultar promocion";
+            treeNode5.Name = "NodoPromociones";
+            treeNode5.Text = "Promociones";
+            treeNode6.Name = "NodoProductos";
+            treeNode6.Text = "Productos";
+            treeNode7.Name = "NodoAgregarProveedor";
+            treeNode7.Text = "Agregar proveedor";
+            treeNode8.Name = "NodoConsultarProveedor";
+            treeNode8.Text = "Consultar proveedor";
+            treeNode9.Name = "NodoProveedores";
+            treeNode9.Text = "Proveedores";
+            treeNode10.Name = "NodoAgregarUsuario";
+            treeNode10.Text = "Agregar usuario";
+            treeNode11.Name = "NodoConsultarUsuario";
+            treeNode11.Text = "Consultar usuario";
+            treeNode12.Name = "NodoUsuarios";
+            treeNode12.Text = "Usuarios";
+            treeNode13.Name = "NodoAgregarCliente";
+            treeNode13.Text = "Agregar Cliente";
+            treeNode14.Name = "NodoConsultarCliente";
+            treeNode14.Text = "Consultar cliente";
+            treeNode15.Name = "NodoClientes";
+            treeNode15.Text = "Clientes";
+            treeNode16.Name = "NodoMenu";
+            treeNode16.Text = "Menu";
             this.MenuArbol.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode48});
+            treeNode16});
             this.MenuArbol.Size = new System.Drawing.Size(392, 280);
             this.MenuArbol.TabIndex = 1;
             this.MenuArbol.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.MenuArbol_AfterSelect);
