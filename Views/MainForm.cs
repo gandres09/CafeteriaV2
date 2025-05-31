@@ -4,6 +4,7 @@ using CafeteriaV2.Views.MenuArbol;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace CafeteriaV2
 {
@@ -54,11 +55,18 @@ namespace CafeteriaV2
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
+
+            TreeNode nodoMenu = MenuArbol.Nodes.Find("NodoMenu", true).FirstOrDefault();
+            if (nodoMenu != null)
+            {
+                nodoMenu.Expand();
+            }
         }
 
 
         private void MenuArbol_AfterSelect(object sender, TreeViewEventArgs e)
         {
+
             switch (e.Node.Name)
             {
                 case "NodoAgregarProducto":
