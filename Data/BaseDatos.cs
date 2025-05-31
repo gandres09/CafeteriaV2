@@ -28,14 +28,14 @@ namespace CafeteriaV2.Data
                             FechaModificacion TEXT NOT NULL
                         );
 
-                        -- Tabla de Productos
                         CREATE TABLE IF NOT EXISTS Productos (
                             Id INTEGER PRIMARY KEY AUTOINCREMENT,
                             Nombre TEXT NOT NULL,
                             Descripcion TEXT,
                             Precio REAL NOT NULL,
                             Costo REAL NOT NULL,
-                            Stock INTEGER NOT NULL,
+                            Stock REAL NOT NULL,
+                            UnidadMedida TEXT NOT NULL CHECK (UnidadMedida IN ('Unidad', 'Peso')),
                             Categoria TEXT,
                             Estado TEXT NOT NULL,
                             FechaAlta TEXT NOT NULL,
@@ -45,6 +45,7 @@ namespace CafeteriaV2.Data
                             CodigoInterno INTEGER NOT NULL,
                             FOREIGN KEY (ProveedorId) REFERENCES Proveedores(Id)
                         );
+
 
                         -- Tabla de Clientes para el sistema de fidelidad
                         CREATE TABLE IF NOT EXISTS Clientes (
@@ -74,7 +75,7 @@ namespace CafeteriaV2.Data
                             Id INTEGER PRIMARY KEY AUTOINCREMENT,
                             VentaId INTEGER NOT NULL,
                             ProductoId INTEGER NOT NULL,
-                            Cantidad INTEGER NOT NULL,
+                            Cantidad REAL NOT NULL,
                             PrecioUnitario REAL NOT NULL,
                             FOREIGN KEY (VentaId) REFERENCES VentasPublico(Id),
                             FOREIGN KEY (ProductoId) REFERENCES Productos(Id)
@@ -142,6 +143,55 @@ namespace CafeteriaV2.Data
                             FechaFin TEXT NOT NULL,
                             FOREIGN KEY (ProductoId) REFERENCES Productos(Id)
                         );
+
+                        -- Tabla de facturas de compra a proveedores
+                        CREATE TABLE IF NOT EXISTS FacturasCompra (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            Fecha TEXT NOT NULL,
+                            ProveedorId INTEGER NOT NULL,
+                            Total REAL NOT NULL,
+                            UsuarioId INTEGER NOT NULL,
+                            FOREIGN KEY (ProveedorId) REFERENCES Proveedores(Id),
+                            FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id)
+                        );
+
+                        -- Detalle de cada factura de compra (con cantidades decimales)
+                        CREATE TABLE IF NOT EXISTS DetalleFacturaCompra (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            FacturaId INTEGER NOT NULL,
+                            ProductoId INTEGER NOT NULL,
+                            Cantidad REAL NOT NULL,  -- Cambiado de INTEGER a REAL
+                            PrecioUnitario REAL NOT NULL,
+                            Subtotal REAL NOT NULL,
+                            FOREIGN KEY (FacturaId) REFERENCES FacturasCompra(Id),
+                            FOREIGN KEY (ProductoId) REFERENCES Productos(Id)
+                        );
+
+                        CREATE TABLE IF NOT EXISTS NotasCredito (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            Fecha TEXT NOT NULL,
+                            FacturaId INTEGER NOT NULL, -- Factura original que se está ajustando
+                            ProveedorId INTEGER NOT NULL,
+                            Total REAL NOT NULL,
+                            Motivo TEXT,
+                            UsuarioId INTEGER NOT NULL,
+                            FOREIGN KEY (FacturaId) REFERENCES FacturasCompra(Id),
+                            FOREIGN KEY (ProveedorId) REFERENCES Proveedores(Id),
+                            FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id)
+                        );
+
+                        CREATE TABLE IF NOT EXISTS DetalleNotaCredito (
+                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            NotaCreditoId INTEGER NOT NULL,
+                            ProductoId INTEGER NOT NULL,
+                            Cantidad REAL NOT NULL,
+                            PrecioUnitario REAL NOT NULL,
+                            Subtotal REAL NOT NULL,
+                            FOREIGN KEY (NotaCreditoId) REFERENCES NotasCredito(Id),
+                            FOREIGN KEY (ProductoId) REFERENCES Productos(Id)
+                        );
+
+
 
 
 

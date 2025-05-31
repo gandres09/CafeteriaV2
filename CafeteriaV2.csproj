@@ -183,7 +183,11 @@
     <Compile Include="Data\BaseDatos.cs" />
     <Compile Include="Models\Entities\ArqueoDiario.cs" />
     <Compile Include="Models\Entities\Cliente.cs" />
+    <Compile Include="Models\Entities\DetalleFacturaCompra.cs" />
+    <Compile Include="Models\Entities\DetalleNotaCreditoCompra.cs" />
+    <Compile Include="Models\Entities\FacturaCompra.cs" />
     <Compile Include="Models\Entities\MovimientoPuntos.cs" />
+    <Compile Include="Models\Entities\NotaCreditoCompra.cs" />
     <Compile Include="Models\Entities\Promocion.cs" />
     <Compile Include="Models\Entities\Proveedor.cs" />
     <Compile Include="Models\Entities\RetiroCaja.cs" />
@@ -191,7 +195,9 @@
     <Compile Include="Models\Entities\VentaPublico.cs" />
     <Compile Include="Models\Repositories\ArqueoDiarioRepository.cs" />
     <Compile Include="Models\Repositories\ClienteRepository.cs" />
+    <Compile Include="Models\Repositories\FacturaCompraRepository.cs" />
     <Compile Include="Models\Repositories\MovimientoPuntosRepository.cs" />
+    <Compile Include="Models\Repositories\NotaCreditoCompraRepository.cs" />
     <Compile Include="Models\Repositories\ProductoRepository.cs" />
     <Compile Include="Models\Entities\Producto.cs" />
     <Compile Include="Models\Repositories\PromocionRepository.cs" />

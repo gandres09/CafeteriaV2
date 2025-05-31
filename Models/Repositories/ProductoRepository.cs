@@ -31,16 +31,18 @@ public class ProductoRepository
                             Descripcion = reader["Descripcion"].ToString(),
                             Precio = Convert.ToDecimal(reader["Precio"]),
                             Costo = Convert.ToDecimal(reader["Costo"]),
-                            Stock = Convert.ToInt32(reader["Stock"]),
+                            Stock = Convert.ToDecimal(reader["Stock"]),
+                            UnidadMedida = reader["UnidadMedida"].ToString(),
                             Categoria = reader["Categoria"].ToString(),
                             Estado = (Producto.EstadoProducto)Enum.Parse(typeof(Producto.EstadoProducto), reader["Estado"].ToString()),
                             FechaAlta = Convert.ToDateTime(reader["FechaAlta"]),
                             FechaModificacion = Convert.ToDateTime(reader["FechaModificacion"]),
-                            Vencimiento = Convert.ToDateTime(reader["Vencimiento"]),
-                            Proveedor = null, // Aquí podrías cargar el proveedor si es necesario
+                            Vencimiento = reader["Vencimiento"] != DBNull.Value ? Convert.ToDateTime(reader["Vencimiento"]) : (DateTime?)null,
+                            Proveedor = null, // Podés implementar si querés traer el proveedor
                             CodigoInterno = Convert.ToInt32(reader["CodigoInterno"]),
                             ProveedorId = Convert.ToInt32(reader["ProveedorId"])
                         });
+
                     }
                 }
             }
