@@ -3,7 +3,6 @@ using CafeteriaV2.Views.Forms;
 //using CafeteriaV2.Views.MenuArbol;
 using System;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 
 namespace CafeteriaV2
@@ -39,10 +38,10 @@ namespace CafeteriaV2
                 MessageBox.Show($"El rol del usuario {usuarioAutenticado.NombreUsuario} no está reconocido. Acceso denegado.",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
-            }  
-            ConstruirArbolMenu();
             }
+            ConstruirArbolMenu();
         }
+
 
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

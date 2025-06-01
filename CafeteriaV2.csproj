@@ -224,57 +224,39 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MenuArbol\arqueos\AuditoríaCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\arqueos\AuditoríaCaja.cs" />
     <Compile Include="Views\MenuArbol\arqueos\AuditoríaCaja.Designer.cs">
       <DependentUpon>AuditoríaCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\arqueos\CerrarTurnoDía.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\arqueos\CerrarTurnoDía.cs" />
     <Compile Include="Views\MenuArbol\arqueos\CerrarTurnoDía.Designer.cs">
       <DependentUpon>CerrarTurnoDía.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\arqueos\InformeSemanalMensual.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\arqueos\InformeSemanalMensual.cs" />
     <Compile Include="Views\MenuArbol\arqueos\InformeSemanalMensual.Designer.cs">
       <DependentUpon>InformeSemanalMensual.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\arqueos\IniciarTurnoDía.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\arqueos\IniciarTurnoDía.cs" />
     <Compile Include="Views\MenuArbol\arqueos\IniciarTurnoDía.Designer.cs">
       <DependentUpon>IniciarTurnoDía.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\arqueos\RegistrarRetiros.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\arqueos\RegistrarRetiros.cs" />
     <Compile Include="Views\MenuArbol\arqueos\RegistrarRetiros.Designer.cs">
       <DependentUpon>RegistrarRetiros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\arqueos\ResumenDiario.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\arqueos\ResumenDiario.cs" />
     <Compile Include="Views\MenuArbol\arqueos\ResumenDiario.Designer.cs">
       <DependentUpon>ResumenDiario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\clientes\CanjearPuntos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\CanjearPuntos.cs" />
     <Compile Include="Views\MenuArbol\clientes\CanjearPuntos.Designer.cs">
       <DependentUpon>CanjearPuntos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\clientes\ClientesInactivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\ClientesInactivos.cs" />
     <Compile Include="Views\MenuArbol\clientes\ClientesInactivos.Designer.cs">
       <DependentUpon>ClientesInactivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\clientes\EstadísticasCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\EstadísticasCompras.cs" />
     <Compile Include="Views\MenuArbol\clientes\EstadísticasCompras.Designer.cs">
       <DependentUpon>EstadísticasCompras.cs</DependentUpon>
     </Compile>
@@ -320,9 +302,7 @@
     <Compile Include="Views\MenuArbol\compras\ProveedoresActivos1Inactivos1.Designer.cs">
       <DependentUpon>ProveedoresActivos1Inactivos1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\compras\RegistrarFacturaCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\compras\RegistrarFacturaCompra.cs" />
     <Compile Include="Views\MenuArbol\compras\RegistrarFacturaCompra.Designer.cs">
       <DependentUpon>RegistrarFacturaCompra.cs</DependentUpon>
     </Compile>
@@ -338,9 +318,7 @@
     <Compile Include="Views\MenuArbol\configuracion\CategoríasProductos.Designer.cs">
       <DependentUpon>CategoríasProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\configuracion\ImportarDatos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\ImportarDatos.cs" />
     <Compile Include="Views\MenuArbol\configuracion\ImportarDatos.Designer.cs">
       <DependentUpon>ImportarDatos.cs</DependentUpon>
     </Compile>
@@ -380,9 +358,7 @@
     <Compile Include="Views\MenuArbol\productos\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\productos\ConsultarProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ConsultarProductos.cs" />
     <Compile Include="Views\MenuArbol\productos\ConsultarProductos.Designer.cs">
       <DependentUpon>ConsultarProductos.cs</DependentUpon>
     </Compile>
@@ -428,9 +404,7 @@
     <Compile Include="Views\MenuArbol\promociones\ListarPromocionesActivas.Designer.cs">
       <DependentUpon>ListarPromocionesActivas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\promociones\PromocionesXFecha.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\PromocionesXFecha.cs" />
     <Compile Include="Views\MenuArbol\promociones\PromocionesXFecha.Designer.cs">
       <DependentUpon>PromocionesXFecha.cs</DependentUpon>
     </Compile>
@@ -452,9 +426,7 @@
     <Compile Include="Views\MenuArbol\reportes\ComprasXProveedor.Designer.cs">
       <DependentUpon>ComprasXProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\reportes\FacturasNotasCrédito.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\FacturasNotasCrédito.cs" />
     <Compile Include="Views\MenuArbol\reportes\FacturasNotasCrédito.Designer.cs">
       <DependentUpon>FacturasNotasCrédito.cs</DependentUpon>
     </Compile>
