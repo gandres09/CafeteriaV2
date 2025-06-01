@@ -224,65 +224,317 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MenuArbol\AgregarClienteForm.cs">
+    <Compile Include="Views\MenuArbol\arqueos\AuditoríaCaja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarClienteForm.Designer.cs">
-      <DependentUpon>AgregarClienteForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\arqueos\AuditoríaCaja.Designer.cs">
+      <DependentUpon>AuditoríaCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarProductoForm.cs">
+    <Compile Include="Views\MenuArbol\arqueos\CerrarTurnoDía.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarProductoForm.Designer.cs">
-      <DependentUpon>AgregarProductoForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\arqueos\CerrarTurnoDía.Designer.cs">
+      <DependentUpon>CerrarTurnoDía.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarPromocionForm.cs">
+    <Compile Include="Views\MenuArbol\arqueos\InformeSemanalMensual.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarPromocionForm.Designer.cs">
-      <DependentUpon>AgregarPromocionForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\arqueos\InformeSemanalMensual.Designer.cs">
+      <DependentUpon>InformeSemanalMensual.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarProveedorForm.cs">
+    <Compile Include="Views\MenuArbol\arqueos\IniciarTurnoDía.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarProveedorForm.Designer.cs">
-      <DependentUpon>AgregarProveedorForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\arqueos\IniciarTurnoDía.Designer.cs">
+      <DependentUpon>IniciarTurnoDía.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarUsuarioForm.cs">
+    <Compile Include="Views\MenuArbol\arqueos\RegistrarRetiros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\AgregarUsuarioForm.Designer.cs">
-      <DependentUpon>AgregarUsuarioForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\arqueos\RegistrarRetiros.Designer.cs">
+      <DependentUpon>RegistrarRetiros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaClienteForm.cs">
+    <Compile Include="Views\MenuArbol\arqueos\ResumenDiario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaClienteForm.Designer.cs">
-      <DependentUpon>ConsultaClienteForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\arqueos\ResumenDiario.Designer.cs">
+      <DependentUpon>ResumenDiario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaProductoForm.cs">
+    <Compile Include="Views\MenuArbol\clientes\CanjearPuntos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaProductoForm.Designer.cs">
-      <DependentUpon>ConsultaProductoForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\clientes\CanjearPuntos.Designer.cs">
+      <DependentUpon>CanjearPuntos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaPromocionForm.cs">
+    <Compile Include="Views\MenuArbol\clientes\ClientesInactivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaPromocionForm.Designer.cs">
-      <DependentUpon>ConsultaPromocionForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\clientes\ClientesInactivos.Designer.cs">
+      <DependentUpon>ClientesInactivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaProveedorForm.cs">
+    <Compile Include="Views\MenuArbol\clientes\EstadísticasCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaProveedorForm.Designer.cs">
-      <DependentUpon>ConsultaProveedorForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\clientes\EstadísticasCompras.Designer.cs">
+      <DependentUpon>EstadísticasCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaUsuarioForm.cs">
+    <Compile Include="Views\MenuArbol\clientes\MovimientoPuntos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\ConsultaUsuarioForm.Designer.cs">
-      <DependentUpon>ConsultaUsuarioForm.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\clientes\MovimientoPuntos.Designer.cs">
+      <DependentUpon>MovimientoPuntos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\RegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\RegistrarCliente.Designer.cs">
+      <DependentUpon>RegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\VerClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\clientes\VerClientes.Designer.cs">
+      <DependentUpon>VerClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\CompararPreciosProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\CompararPreciosProductos.Designer.cs">
+      <DependentUpon>CompararPreciosProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\EstadísticasXProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\EstadísticasXProveedor.Designer.cs">
+      <DependentUpon>EstadísticasXProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\NotasCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\NotasCredito.Designer.cs">
+      <DependentUpon>NotasCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\ProveedoresActivos1Inactivos1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\ProveedoresActivos1Inactivos1.Designer.cs">
+      <DependentUpon>ProveedoresActivos1Inactivos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\RegistrarFacturaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\RegistrarFacturaCompra.Designer.cs">
+      <DependentUpon>RegistrarFacturaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\VerComprasXFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\compras\VerComprasXFecha.Designer.cs">
+      <DependentUpon>VerComprasXFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\CategoríasProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\CategoríasProductos.Designer.cs">
+      <DependentUpon>CategoríasProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\ImportarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\ImportarDatos.Designer.cs">
+      <DependentUpon>ImportarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\ParámetrosSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\ParámetrosSistema.Designer.cs">
+      <DependentUpon>ParámetrosSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\RegistroCambiosLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\RegistroCambiosLogs.Designer.cs">
+      <DependentUpon>RegistroCambiosLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\RespaldarBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\RespaldarBaseDatos.Designer.cs">
+      <DependentUpon>RespaldarBaseDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\UnidadesDeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\configuracion\UnidadesDeMedida.Designer.cs">
+      <DependentUpon>UnidadesDeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ActualizarPreciosEnLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ActualizarPreciosEnLote.Designer.cs">
+      <DependentUpon>ActualizarPreciosEnLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ConsultarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ConsultarProductos.Designer.cs">
+      <DependentUpon>ConsultarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ListadoParaImpresión1Excel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ListadoParaImpresión1Excel1.Designer.cs">
+      <DependentUpon>ListadoParaImpresión1Excel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ProductosBajoStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ProductosBajoStock.Designer.cs">
+      <DependentUpon>ProductosBajoStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ProductosProximosVencer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\ProductosProximosVencer.Designer.cs">
+      <DependentUpon>ProductosProximosVencer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\UnidadesCategorías.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\productos\UnidadesCategorías.Designer.cs">
+      <DependentUpon>UnidadesCategorías.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\CrearNuevaPromoción.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\CrearNuevaPromoción.Designer.cs">
+      <DependentUpon>CrearNuevaPromoción.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\EnviarNotificaciónClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\EnviarNotificaciónClientes.Designer.cs">
+      <DependentUpon>EnviarNotificaciónClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\ListarPromocionesActivas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\ListarPromocionesActivas.Designer.cs">
+      <DependentUpon>ListarPromocionesActivas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\PromocionesXFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\PromocionesXFecha.Designer.cs">
+      <DependentUpon>PromocionesXFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\RegalosXCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\promociones\RegalosXCompra.Designer.cs">
+      <DependentUpon>RegalosXCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\ArqueosRetiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\ArqueosRetiros.Designer.cs">
+      <DependentUpon>ArqueosRetiros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\ComprasXProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\ComprasXProveedor.Designer.cs">
+      <DependentUpon>ComprasXProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\FacturasNotasCrédito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\FacturasNotasCrédito.Designer.cs">
+      <DependentUpon>FacturasNotasCrédito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\PuntosOtorgadosCanjeados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\PuntosOtorgadosCanjeados.Designer.cs">
+      <DependentUpon>PuntosOtorgadosCanjeados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\StockValorizado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\StockValorizado.Designer.cs">
+      <DependentUpon>StockValorizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\VentasXDíaXMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\reportes\VentasXDíaXMes.Designer.cs">
+      <DependentUpon>VentasXDíaXMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\CambiarContraseña.Designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\CrearNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\CrearNuevoUsuario.Designer.cs">
+      <DependentUpon>CrearNuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\HistorialSesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\HistorialSesiones.Designer.cs">
+      <DependentUpon>HistorialSesiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\PermisosXRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\PermisosXRol.Designer.cs">
+      <DependentUpon>PermisosXRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\VerUsuariosRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\usuarios\VerUsuariosRoles.Designer.cs">
+      <DependentUpon>VerUsuariosRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\ConsultarDetallesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\ConsultarDetallesVenta.Designer.cs">
+      <DependentUpon>ConsultarDetallesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\HistorialVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\HistorialVentas.Designer.cs">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\ProductosMasVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\ProductosMasVendidos.Designer.cs">
+      <DependentUpon>ProductosMasVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\RegistrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\RegistrarVenta.Designer.cs">
+      <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\TicketActual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuArbol\ventas\TicketActual.Designer.cs">
+      <DependentUpon>TicketActual.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

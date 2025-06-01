@@ -29,40 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Agregar producto");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Consultar producto");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Agregar promocion");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Consultar promocion");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Promociones", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Productos", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Agregar proveedor");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Consultar proveedor");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Proveedores", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Agregar usuario");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Consultar usuario");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Agregar Cliente");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Consultar cliente");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Clientes", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Menu", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode9,
-            treeNode12,
-            treeNode15});
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MenuArbol = new System.Windows.Forms.TreeView();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.MenuArbol = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,11 +88,11 @@
             treeNode16});
             this.MenuArbol.Size = new System.Drawing.Size(392, 280);
             this.MenuArbol.TabIndex = 1;
-            this.MenuArbol.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.MenuArbol_AfterSelect);
+          //  this.MenuArbol.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.MenuArbol_AfterSelect);
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(688, 526);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(438, 526);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(84, 23);
             this.btnCerrarSesion.TabIndex = 2;
@@ -131,14 +100,25 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // MenuArbol
+            // 
+            this.MenuArbol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
+            this.MenuArbol.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MenuArbol.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Bold);
+            this.MenuArbol.ItemHeight = 28;
+            this.MenuArbol.Location = new System.Drawing.Point(12, 180);
+            this.MenuArbol.Name = "MenuArbol";
+            this.MenuArbol.Size = new System.Drawing.Size(420, 369);
+            this.MenuArbol.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.btnCerrarSesion);
+            this.ClientSize = new System.Drawing.Size(534, 561);
             this.Controls.Add(this.MenuArbol);
+            this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -157,6 +137,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TreeView MenuArbol;
         private System.Windows.Forms.Button btnCerrarSesion;
+
     }
 }
 
