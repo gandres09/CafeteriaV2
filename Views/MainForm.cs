@@ -3,6 +3,7 @@ using CafeteriaV2.Views.Forms;
 //using CafeteriaV2.Views.MenuArbol;
 using System;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 
 namespace CafeteriaV2
@@ -40,11 +41,9 @@ namespace CafeteriaV2
                 Application.Exit();
             }  
             ConstruirArbolMenu();
+            }
         }
 
-
-        
-    
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
