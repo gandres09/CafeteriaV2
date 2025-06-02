@@ -45,17 +45,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // MenuArbol
-            // 
-            this.MenuArbol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(234)))), ((int)(((byte)(208)))));
-            this.MenuArbol.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuArbol.ItemHeight = 20;
-            this.MenuArbol.Location = new System.Drawing.Point(13, 227);
-            this.MenuArbol.Name = "MenuArbol";
-            this.MenuArbol.Size = new System.Drawing.Size(392, 280);
-            this.MenuArbol.TabIndex = 1;
-          //  this.MenuArbol.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.MenuArbol_AfterSelect);
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Location = new System.Drawing.Point(438, 526);
@@ -70,7 +59,8 @@
             // 
             this.MenuArbol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
             this.MenuArbol.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MenuArbol.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Bold);
+            this.MenuArbol.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuArbol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(50)))), ((int)(((byte)(32)))));
             this.MenuArbol.ItemHeight = 28;
             this.MenuArbol.Location = new System.Drawing.Point(12, 180);
             this.MenuArbol.Name = "MenuArbol";

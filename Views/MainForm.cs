@@ -1,8 +1,25 @@
 ﻿using CafeteriaV2.Models.Entities;
 using CafeteriaV2.Views.Forms;
+using CafeteriaV2.Views.MenuArbol.arqueos;
+using CafeteriaV2.Views.MenuArbol.clientes;
+using CafeteriaV2.Views.MenuArbol.compras;
+
+using CafeteriaV2.Views.MenuArbol.configuracion;
+using CafeteriaV2.Views.MenuArbol.productos;
+using CafeteriaV2.Views.MenuArbol.promociones;
+using CafeteriaV2.Views.MenuArbol.reportes;
+using CafeteriaV2.Views.MenuArbol.usuarios;
+using CafeteriaV2.Views.MenuArbol.ventas;
+
+
+
+
+
+
 //using CafeteriaV2.Views.MenuArbol;
 using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace CafeteriaV2
@@ -15,6 +32,7 @@ namespace CafeteriaV2
         public MainForm(Usuario usuario)
         {
             InitializeComponent();
+            MenuArbol.NodeMouseDoubleClick += MenuArbol_NodeMouseDoubleClick;
             usuarioAutenticado = usuario;
         }
 
@@ -163,6 +181,182 @@ namespace CafeteriaV2
             MenuArbol.Nodes.Add(configuracion);
             MenuArbol.Nodes.Add(reportes);
         }
+
+        private void MenuArbol_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string opcion = e.Node.Text;
+
+            switch (opcion)
+            {
+                // 🧮 Arqueo Diario y Caja
+                case "🕘 Iniciar Turno / Día":
+                    new IniciarTurnoDía().ShowDialog();
+                    break;
+                case "🕔 Cerrar Turno / Día":
+                    new CerrarTurnoDía().ShowDialog();
+                    break;
+                case "💵 Registrar Retiros":
+                    new RegistrarRetiros().ShowDialog();
+                    break;
+                case "📊 Resumen Diario":
+                    new ResumenDiario().ShowDialog();
+                    break;
+                case "📊 Informe Semanal / Mensual":
+                    new InformeSemanalMensual().ShowDialog();
+                    break;
+                case "🔍 Auditoría de Caja":
+                    new AuditoríaCaja().ShowDialog();
+                    break;
+
+                // 👥 Clientes y Fidelización
+                case "➕ Registrar Cliente":
+                    new RegistrarCliente().ShowDialog();
+                    break;
+                case "🔍 Ver Clientes":
+                    new VerClientes().ShowDialog();
+                    break;
+                case "🏆 Movimiento de Puntos":
+                    new Views.MenuArbol.clientes.MovimientoPuntos().ShowDialog();
+                    break;
+                case "🎁 Canjear Puntos":
+                    new CanjearPuntos().ShowDialog();
+                    break;
+                case "📈 Estadísticas de Compras":
+                    new EstadísticasCompras().ShowDialog();
+                    break;
+                case "🗑️ Clientes Inactivos":
+                    new ClientesInactivos().ShowDialog();
+                    break;
+
+                // 🧾 Compras y Proveedores
+                case "🧾 Registrar Factura de Compra":
+                    new RegistrarFacturaCompra().ShowDialog();
+                    break;
+                case "🗂 Ver Compras por Fecha":
+                    new VerComprasXFecha().ShowDialog();
+                    break;
+                case "🧾 Notas de Crédito":
+                    new NotasCredito().ShowDialog();
+                    break;
+                case "👤 Proveedores Activos/Inactivos":
+                    new ProveedoresActivos1Inactivos1().ShowDialog();
+                    break;
+                case "📈 Estadísticas por Proveedor":
+                    new EstadísticasXProveedor().ShowDialog();
+                    break;
+                case "💲 Comparar Precios de Productos":
+                    new CompararPreciosProductos().ShowDialog();
+                    break;
+
+                // ⚙️ Configuración y Utilidades
+                case "📥 Importar Datos":
+                    new ImportarDatos().ShowDialog();
+                    break;
+                case "🏷️ Categorías de Productos":
+                    new CategoríasProductos().ShowDialog();
+                    break;
+
+                // 📦 Productos y Stock
+                case "🔁 Actualizar Precios en Lote":
+                    new ActualizarPreciosEnLote().ShowDialog();
+                    break;
+                case "➕ Agregar Producto":
+                    new AgregarProducto().ShowDialog();
+                    break;
+                case "🔍 Consultar Productos":
+                    new ConsultarProductos().ShowDialog();
+                    break;
+                case "📋 Listado para impresión / Excel":
+                    new ListadoParaImpresión1Excel1().ShowDialog();
+                    break;
+                case "📉 Productos con Bajo Stock":
+                    new ProductosBajoStock().ShowDialog();
+                    break;
+                case "📅 Productos Próximos a Vencer":
+                    new ProductosProximosVencer().ShowDialog();
+                    break;
+                case "🧷 Unidades y Categorías":
+                    new UnidadesCategorías().ShowDialog();
+                    break;
+
+                // 🎁 Promociones y Marketing
+                case "➕ Crear Nueva Promoción":
+                    new CrearNuevaPromoción().ShowDialog();
+                    break;
+                case "💌 Enviar Notificación a Clientes":
+                    new EnviarNotificaciónClientes().ShowDialog();
+                    break;
+                case "🗂 Listar Promociones Activas":
+                    new ListarPromocionesActivas().ShowDialog();
+                    break;
+                case "⏰ Promociones por Fecha":
+                    new PromocionesXFecha().ShowDialog();
+                    break;
+                case "🛍️ Regalos por Compra":
+                    new RegalosXCompra().ShowDialog();
+                    break;
+
+                // "📊 Reportes e Informes"
+                case "💰 Arqueos y Retiros":
+                    new ArqueosRetiros().ShowDialog();
+                    break;
+                case "💸 Compras por Proveedor":
+                    new ComprasXProveedor().ShowDialog();
+                    break;
+                case "🧾 Facturas y Notas de Crédito":
+                    new FacturasNotasCrédito().ShowDialog();
+                    break;
+                case "🏆 Puntos Otorgados y Canjeados":
+                    new PuntosOtorgadosCanjeados().ShowDialog();
+                    break;
+                case "📦 Stock Valorizado":
+                    new StockValorizado().ShowDialog();
+                    break;
+                case "📋 Ventas por Día/Mes":
+                    new VentasXDíaXMes().ShowDialog();
+                    break;
+
+                // 👤 Usuarios y Seguridad
+                case "🔐 Cambiar Contraseña":
+                    new CambiarContraseña().ShowDialog();
+                    break;
+                case "➕ Crear Nuevo Usuario":
+                    new CrearNuevoUsuario().ShowDialog();
+                    break;
+                case "📜 Historial de Sesiones":
+                    new HistorialSesiones().ShowDialog();
+                    break;
+                case "📋 Permisos por Rol":
+                    new PermisosXRol().ShowDialog();
+                    break;
+                case "🧑‍💼 Ver Usuarios y Roles":
+                    new VerUsuariosRoles().ShowDialog();
+                    break;
+
+                // 🧾 Ventas
+                case "🔍 Consultar Detalles de Venta":
+                    new ConsultarDetallesVenta().ShowDialog();
+                    break;
+                case "📅 Historial de Ventas":
+                    new HistorialVentas().ShowDialog();
+                    break;
+                case "📦 Productos más vendidos":
+                    new ProductosMasVendidos().ShowDialog();
+                    break;
+                case "💰 Registrar Venta":
+                    new RegistrarVenta().ShowDialog();
+                    break;
+                case "🧾 Ticket Actual":
+                    new TicketActual().ShowDialog();
+                    break;
+
+
+                //default:
+                //    MessageBox.Show("Función aún no implementada para: " + opcion, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    break;
+            }
+        }
+
 
     }
 }
