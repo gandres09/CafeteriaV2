@@ -25,7 +25,7 @@ namespace CafeteriaV2.Views.MenuArbol.productos
 
             // ComboBox filtro
             this.cmbFiltro.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.cmbFiltro.Items.AddRange(new object[] { "Código", "Nombre", "Proveedor" });
+            //this.cmbFiltro.Items.AddRange(new object[] { "Código", "Nombre", "Proveedor" });
             this.cmbFiltro.Location = new System.Drawing.Point(20, 20);
             this.cmbFiltro.Size = new System.Drawing.Size(120, 23);
 
@@ -47,12 +47,6 @@ namespace CafeteriaV2.Views.MenuArbol.productos
             this.dgvResultados.AllowUserToDeleteRows = false;
             this.dgvResultados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dgvResultados.DoubleClick += new System.EventHandler(this.dgvResultados_DoubleClick);
-
-            // Columnas (se pueden asignar también dinámicamente si prefieres)
-            this.dgvResultados.Columns.Add("CodigoInterno", "Código");
-            this.dgvResultados.Columns.Add("Nombre", "Nombre");
-            this.dgvResultados.Columns.Add("Precio", "Precio");
-            this.dgvResultados.Columns.Add("Stock", "Stock");
 
             // Form
             this.ClientSize = new System.Drawing.Size(550, 380);
