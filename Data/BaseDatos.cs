@@ -49,14 +49,14 @@ namespace CafeteriaV2.Data
                             Precio REAL NOT NULL,
                             Costo REAL NOT NULL,
                             Stock REAL NOT NULL,
-                            UnidadMedida TEXT NOT NULL CHECK (UnidadMedida IN ('Unidad', 'Peso')),
+                            UnidadMedida TEXT NOT NULL CHECK (UnidadMedida IN ('Unidad', 'Peso', 'Litro')),
                             Categoria TEXT,
                             Estado TEXT NOT NULL,
                             FechaAlta TEXT NOT NULL,
                             FechaModificacion TEXT NOT NULL,
                             Vencimiento TEXT,
-                            ProveedorId INTEGER NOT NULL,
-                            CodigoInterno INTEGER NOT NULL,
+                            ProveedorId INTEGER,
+                            CodigoInterno INTEGER NOT NULL UNIQUE,
                             FOREIGN KEY (ProveedorId) REFERENCES Proveedores(Id)
                         );
 

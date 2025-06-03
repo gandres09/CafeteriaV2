@@ -264,7 +264,7 @@ namespace CafeteriaV2
                     new AgregarProducto().ShowDialog();
                     break;
                 case "🔍 Consultar Productos":
-                    new ConsultarProductos().ShowDialog();
+                    new ConsultaProducto().ShowDialog();
                     break;
                 case "📋 Listado para impresión / Excel":
                     new ListadoParaImpresión1Excel1().ShowDialog();
