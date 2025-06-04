@@ -2,10 +2,11 @@
 using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ProductoRepository
 {
-    private string connectionString = "Data Source=miCafeteria.db";
+    public string connectionString = "Data Source=miCafeteria.db";
 
     public List<Producto> ObtenerTodos()
     {
@@ -116,4 +117,24 @@ public class ProductoRepository
             return true; // Si hay error asumimos que el código puede estar duplicado para evitar conflictos
         }
     }
+
+    public List<Producto> ObtenerTodos(string proveedor = null, string nombre = null, string codigoInterno = null)
+    {
+        List<Producto> productos = ObtenerTodos(); // Obtener todos los productos  
+        if (!string.IsNullOrEmpty(proveedor))
+        {
+            productos = productos.FindAll(p => p.Proveedor != null && p.Proveedor.Nombre.IndexOf(proveedor, StringComparison.OrdinalIgnoreCase) >= 0);
+        }
+        if (!string.IsNullOrEmpty(nombre))
+        {
+            productos = productos.FindAll(p => p.Nombre.IndexOf(nombre, StringComparison.OrdinalIgnoreCase) >= 0);
+        }
+        if (!string.IsNullOrEmpty(codigoInterno) && int.TryParse(codigoInterno, out int codigo))
+        {
+            productos = productos.FindAll(p => p.CodigoInterno == codigo);
+        }
+        return productos;
+    }
+
+
 }

@@ -13,7 +13,7 @@ namespace CafeteriaV2.Views.MenuArbol.productos
             base.Dispose(disposing);
         }
 
-        private void InitializeComponent()
+        private void    InitializeComponent()
         {
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();

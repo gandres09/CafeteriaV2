@@ -386,11 +386,11 @@
     <Compile Include="Views\MenuArbol\productos\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuArbol\productos\ConsultarProductos.cs">
+    <Compile Include="Views\MenuArbol\productos\ConsultaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuArbol\productos\ConsultarProductos.Designer.cs">
-      <DependentUpon>ConsultarProductos.cs</DependentUpon>
+    <Compile Include="Views\MenuArbol\productos\ConsultaProducto.Designer.cs">
+      <DependentUpon>ConsultaProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MenuArbol\productos\DetalleProducto.cs">
       <SubType>Form</SubType>
@@ -561,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MenuArbol\productos\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuArbol\productos\ConsultaProducto.resx">
+      <DependentUpon>ConsultaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

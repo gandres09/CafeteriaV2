@@ -45,7 +45,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(105, 12);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(188, 20);
             this.txtNombre.TabIndex = 0;
@@ -53,7 +53,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(105, 37);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(188, 50);
@@ -62,7 +62,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(105, 93);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(76, 20);
             this.txtPrecio.TabIndex = 2;
@@ -70,7 +70,7 @@
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(218, 93);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(76, 20);
             this.txtCosto.TabIndex = 3;
@@ -78,7 +78,7 @@
             // numStock
             // 
             this.numStock.Location = new System.Drawing.Point(105, 118);
-            this.numStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numStock.Margin = new System.Windows.Forms.Padding(2);
             this.numStock.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -93,7 +93,7 @@
             this.cmbUnidadMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUnidadMedida.FormattingEnabled = true;
             this.cmbUnidadMedida.Location = new System.Drawing.Point(218, 118);
-            this.cmbUnidadMedida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUnidadMedida.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUnidadMedida.Name = "cmbUnidadMedida";
             this.cmbUnidadMedida.Size = new System.Drawing.Size(76, 21);
             this.cmbUnidadMedida.TabIndex = 5;
@@ -101,7 +101,7 @@
             // txtCategoria
             // 
             this.txtCategoria.Location = new System.Drawing.Point(105, 146);
-            this.txtCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(188, 20);
             this.txtCategoria.TabIndex = 6;
@@ -111,7 +111,7 @@
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(105, 171);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(114, 21);
             this.cmbEstado.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpVencimiento.Location = new System.Drawing.Point(218, 171);
-            this.dtpVencimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpVencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.ShowCheckBox = true;
             this.dtpVencimiento.Size = new System.Drawing.Size(76, 20);
@@ -129,7 +129,7 @@
             // txtCodigoInterno
             // 
             this.txtCodigoInterno.Location = new System.Drawing.Point(105, 199);
-            this.txtCodigoInterno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoInterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoInterno.Name = "txtCodigoInterno";
             this.txtCodigoInterno.ReadOnly = true;
             this.txtCodigoInterno.Size = new System.Drawing.Size(114, 20);
@@ -138,7 +138,7 @@
             // txtProveedorId
             // 
             this.txtProveedorId.Location = new System.Drawing.Point(105, 227);
-            this.txtProveedorId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProveedorId.Margin = new System.Windows.Forms.Padding(2);
             this.txtProveedorId.Name = "txtProveedorId";
             this.txtProveedorId.Size = new System.Drawing.Size(76, 20);
             this.txtProveedorId.TabIndex = 10;
@@ -146,7 +146,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(105, 254);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 24);
             this.btnGuardar.TabIndex = 11;
@@ -157,7 +157,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(218, 254);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 24);
             this.btnCancelar.TabIndex = 12;
@@ -279,6 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(315, 289);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelNombre);
@@ -304,8 +305,11 @@
             this.Controls.Add(this.labelProveedorId);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "AgregarProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Producto";
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             this.ResumeLayout(false);
