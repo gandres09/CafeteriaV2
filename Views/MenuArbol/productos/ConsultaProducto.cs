@@ -63,5 +63,30 @@ namespace CafeteriaV2.Views.MenuArbol.productos
 
 
         }
+
+        private void dgvResultadoConsulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificar que se haya hecho doble clic en una fila válida
+            if (e.RowIndex >= 0 && e.RowIndex < dgvResultadoConsulta.Rows.Count)
+            {
+                // Obtener el producto seleccionado
+                Producto productoSeleccionado = dgvResultadoConsulta.Rows[e.RowIndex].DataBoundItem as Producto;
+                if (productoSeleccionado != null)
+                {
+                    // Abrir el formulario de detalle del producto
+                    DetalleProducto detalleProducto = new DetalleProducto(productoSeleccionado);
+
+                    detalleProducto.ProductoActualizado += (s, args) =>
+                    {
+                        // Actualizar el DataGridView llamando al boton btnBuscar_Click
+                        btnBuscar_Click(s, args); // Llamar al método de búsqueda para actualizar la lista
+                    };
+                    
+                    detalleProducto.ShowDialog(); // Mostrar como diálogo modal
+                }
+            }
+        }
+
+
     }
 }

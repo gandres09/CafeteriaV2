@@ -47,8 +47,10 @@
             this.dgvResultadoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultadoConsulta.Location = new System.Drawing.Point(12, 140);
             this.dgvResultadoConsulta.Name = "dgvResultadoConsulta";
+            this.dgvResultadoConsulta.ReadOnly = true;
             this.dgvResultadoConsulta.Size = new System.Drawing.Size(446, 196);
             this.dgvResultadoConsulta.TabIndex = 0;
+            this.dgvResultadoConsulta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultadoConsulta_CellDoubleClick);
             // 
             // txtProveedor
             // 

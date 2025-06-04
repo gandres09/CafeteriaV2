@@ -136,5 +136,29 @@ public class ProductoRepository
         return productos;
     }
 
+    public static bool ActualizarEstado(int productoId, Producto.EstadoProducto nuevoEstado)
+    {
+        try
+        {
+            using (var conn = new SqliteConnection("Data Source=miCafeteria.db"))
+            {
+                conn.Open();
+                string query = "UPDATE Productos SET Estado = @Estado WHERE Id = @Id";
+                using (var cmd = new SqliteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Estado", nuevoEstado.ToString());
+                    cmd.Parameters.AddWithValue("@Id", productoId);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al actualizar estado del producto: " + ex.Message);
+            return false;
+        }
 
+
+    }
 }

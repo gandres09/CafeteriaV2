@@ -565,6 +565,9 @@
     <EmbeddedResource Include="Views\MenuArbol\productos\ConsultaProducto.resx">
       <DependentUpon>ConsultaProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuArbol\productos\DetalleProducto.resx">
+      <DependentUpon>DetalleProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
